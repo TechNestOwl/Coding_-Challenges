@@ -1,18 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Which marvel hero has the longest name?</h1>
-    <ul>
-        <li></li>
-    </ul>
+<!doctype html>
+<html lang="en" class="h-100">
 
-    <div id="results">
-        
-    </div>
+<head>
+    <title>JavaScript Challenge</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="longestWord.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+
+<body class="h-100">
+
+    <main class="container-fluid h-100 px-5">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h1>Longest String in an Array</h1>
+                <p class="lead">Given an array of coding languages, write a function that accepts the array of names.
+                    <br> The function should return the coding language with the longest name. <br></p>
+                <p><h3>List of Coding Languages</h3>
+                    <code>
+                        [
+                        "C#",
+                        "Python",
+                        "Go",
+                        "Java",
+                        "Kotlin",
+                        "PHP",
+                        "Swift",
+                        "R",
+                        "Ruby",
+                        "C and C++",
+                        "Matlab",
+                        "Typescript",
+                        "Scala",
+                        "SQL",
+                        "HTML",
+                        "CSS",
+                        "NoSQL",
+                        "Rust",
+                        "Perl",
+                    ]
+                    </code></p>
+                <!-- <p><strong>Extra Credit:</strong><em> Find an attractive way to display the entire list of names below
+                        the longest name.</em></p> -->
+
+                <button id="btnSubmit" type="button" class="btn btn-warning">Display Name</button>
+            </div>
+            <div class="col-12 col-md-6 order-first order-md-2">
+                <img src="programming-languages-1.avif" class="img-fluid">
+            </div>
+            <div class="col-12 order-last mt-4 mb-2">
+                <div id="results" class="languageName display-6">
+                    Longest Name Is...
+                </div>
+                <div id="namelist">
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bootstrap JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script> -->
+  
+    <script src="longestWord.js"></script>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click", findLanguage);
+    </script>
+    <!-- <script>
+        window.addEventListener("load", getmenu(1));
+    </script> -->
 </body>
+
 </html>

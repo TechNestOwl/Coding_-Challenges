@@ -1,42 +1,58 @@
-// Given an array of marvel heros, write a function that accepts the array of names. The function should return the hero with the longest name.
 
+const codingLanguages = [
+    "C#",
+    "Python",
+    "Go",
+    "Java",
+    "Kotlin",
+    "PHP",
+    "Swift",
+    "R",
+    "Ruby",
+    "C and C++",
+    "Matlab",
+    "Typescript",
+    "Scala",
+    "SQL",
+    "HTML",
+    "CSS",
+    "NoSQL",
+    "Rust",
+    "Perl",
+];
 
-const marvelHeros = [
-    "Ant-man",
-    "Black Panther",
-    "Black Widow",
-    "Captain America",
-    "Doctory Strange",
-    "Hawkeye",
-    "Hulk",
-    "Iron Man",
-    "Luke Cage",
-    "Moon Knight",
-    "Mrs.Marvel",
-    "Scarlet Witch" ,
-    "Spder-Man",
-    "Thor",
-    "Wasp",
-    "Blue Bettle"
-]
-
-//driver function, used to display and passing values
-function findHero(){
+//driver function, used to display and pass values
+function findLanguage(){
     
-    let lWord = findLongestName(marvelHeros);
+    let lWord = findLongestName(codingLanguages);
 
-    //display in HTML
+    // let sWord = findShortestName(codingLanguages,lWord)
+
     document.getElementById("results").innerHTML = lWord;
-}
-
-
-
+};
 
 function findLongestName(arrayTBsorted){
    
     let longestName = "";
 
+    for(let index = 0; index < arrayTBsorted.length; index++){
+
+        if(arrayTBsorted[index].length > longestName.length){
+            longestName = arrayTBsorted[index];
+        }
+    }
+    return longestName;
+};
+
+function findShortestName(arrayTBsorted, lWord){
    
-   
-    return longestName
-}
+    let shortestName = lWord;
+
+    for(let index = 0; index < arrayTBsorted.length; index++){
+
+        if(arrayTBsorted[index].length < shortestName.length){
+            shortestName = arrayTBsorted[index];
+        }
+    }
+    return shortestName;
+};

@@ -19,15 +19,17 @@
     </div>
     
     <form>
-        <input>
+        <input id="input1" type="text">
         <br>
         <small>Type in a word or phrase</small>
         <div>
-            <button type=submit>Palindrom?</button>
+            <button type=button onsubmit="palindromeCheck(input)">Palindrom?</button>
+            <p class="result">Your result will appear here</p>
         </div>
     </form>
     <div>
-        <p class="result">Your result will appear here</p>
     </div>
-</body>
+    <script src="palindrome.js"/>
+    </body>
+
     </html>

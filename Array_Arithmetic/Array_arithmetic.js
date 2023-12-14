@@ -1,13 +1,36 @@
 // given an array of numbers [8,2,4,29,15,-5,6,88] write a funciton that accpets the array
 //this function returns the sum of all numbers. 
 
+document.getElementById("calculateBtn").addEventListener("click",displayResluts)
+
+const arr1 = [8,2,4,29,15,-5,6,88];
+
+
+
+function displayResluts(){
+    let sum = arrSum(arr1);
+    let avg = arrAvg(arr1);
+    let max = arrMax(arr1);
+    let min = arrMin(arr1);
+
+    let message = `Sum = ${sum}<br> Average = ${avg}<br> Max Value = ${max}<br> Min Value = ${min}`;
+
+
+    document.getElementById("results").innerHTML = message;
+
+
+
+}
 
 
 
 
 
 
-let arr1 = [8,2,4,29,15,-5,6,88];
+
+
+
+
 
 function arrSum(arr){
    let sum = 0;
@@ -16,7 +39,7 @@ function arrSum(arr){
         sum += arr[i];
     }
     
-    // console.log(`The sum of numbers ${arr} is ${sum}`)
+    return sum;
 }
 
 

@@ -1,14 +1,10 @@
 //my paldindrom function needs to return a boolean value.
 // I need to split the given input into an array of strings
 // The, I must sift out all special charcters or spaces, and set each idex item to lowercase. 
-// document.getElementById("submitBtn").addEventLister("click", displayResult())
-
-
 
 
 function displayResult(){
     let str = document.getElementById("input1").value;
-
 
     if(str == ""){
         alert("enter a word or phrase in the input field")
@@ -27,14 +23,9 @@ function displayResult(){
 
     document.getElementById("result").innerHTML = msg;
 
-
 }
 
 document.getElementById("btnSubmit").addEventListener("click",displayResult);
-
-
-
-
 
 function palindromeCheck(str){
    

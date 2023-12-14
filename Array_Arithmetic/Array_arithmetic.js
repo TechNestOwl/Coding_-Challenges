@@ -3,7 +3,7 @@
 
 document.getElementById("calculateBtn").addEventListener("click",displayResluts)
 
-const arr1 = [8,2,4,29,15,-5,6,88];
+const arr1 = [9,2,4,29,15,-9,6,88];
 
 
 

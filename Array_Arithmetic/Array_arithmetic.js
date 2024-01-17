@@ -1,7 +1,7 @@
 // given an array of numbers [8,2,4,29,15,-5,6,88] write a funciton that accpets the array
 //this function returns the sum of all numbers. 
 
-document.getElementById("calculateBtn").addEventListener("click",displayResluts)
+document.getElementById("calculateBtn").addEventListener("click",displayResluts);
 
 const arr1 = [9,2,4,29,15,-9,6,88];
 
@@ -18,17 +18,7 @@ function displayResluts(){
 
     document.getElementById("results").innerHTML = message;
 
-
-
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -57,7 +47,7 @@ function arrAvg(arr){
 }
 
 
-
+//using for loop instead of Math.Max() because it scales better with a larger array. 
 function arrMax(arr){
     let max = arr[0];
 
@@ -66,7 +56,7 @@ function arrMax(arr){
     }
     return max;
 }
-//using for loop instead of Math.Max() because it scales better with a larger array. 
+
 
 function arrMin(arr){
     let min = arr[0];

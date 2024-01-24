@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagram Check</title>
+</head>
+<body>
+    <h1> Are these two words anagrams?</h1>
+    <form id="form1">
+        <input type="text" placeholder="first word or phrase" id = "input1">
+        <input type="text" placeholder="second word or phrase" id = "input2">
+    </form>
+    <button id="btn-submit" type="submit" value = "submit" form = "form1">Check</button>
+
+    <div id="results"></div>
+
+<script src="anagram.js"></script>
+<script>
+
+   document.getElementById("btn-submit").addEventListener("submit",anagramCheck(word1,word2))
+
+
+</script>
+
+</body>
+</html>

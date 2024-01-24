@@ -153,6 +153,7 @@ function citySort(){
 
 
 // [ COMPLICATED METHOD ] of sorting population size either ascending or descending
+// I will demonstrate with the .sort() method further down when sorting by median age.
 function sortByPopulation(data, order){
 
     let sortedPop = [];
@@ -211,4 +212,6 @@ function sortByAge(data){
     //outputing only the median_age of each obj in the array.
     // console.log(data.map(x => x.median_age))
 }
+
+
 

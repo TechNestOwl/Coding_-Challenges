@@ -15,7 +15,7 @@ function convertMi(){
     //getting the users input. Note: parseFloat converts a string into a floating point number
     let kmValue = parseFloat(document.getElementById("InputValue1").value)
 
-    //checking to see if input is valid
+    //checking to see if input is valid/
     if(isNaN(kmValue)){
         alert("please input a number value")
     }else{
@@ -25,7 +25,6 @@ function convertMi(){
         document.getElementById("results").innerHTML = `${kmValue} kilometers is equivalent to ${milesValue.toFixed(2)} miles`
     }
 }
-
 function convertToMi(km){
     let milesValue = 0;
 

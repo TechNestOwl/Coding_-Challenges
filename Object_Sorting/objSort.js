@@ -1,13 +1,10 @@
 //With this array of objects
 //I am going to create a function that takes an Array as a parameter
 
-//I am going to sort through the aray and output in descending order
-//  the population of each item/"city".
+//I am going to sort through the aray and output in either ascending or descending order
+//  the population of each "city".
 
-//array.sort() out of the box will sort items in an array alphabetically.  Because of this propblem,
-/*
-because of this problem, always create a compare function. 
-*/
+
 
 
 //additionally, sort by City Name and median age. 
@@ -36,30 +33,30 @@ let cityData = [
         median_age: 35.5,
         avg_household_size: 2.24
     },
-    // {
-    //     city: "Concord",
-    //     state: "North Carolina",
-    //     state_code: "NC",
-    //     population: 60500,
-    //     median_age: 35.7,
-    //     avg_household_size: 2.72
-    // },
-    // {
-    //     city: "Charlotte",
-    //     state: "North Carolina",
-    //     state_code: "NC",
-    //     population: 827121,
-    //     median_age: 34.3,
-    //     avg_household_size: 2.52
-    // },
-    // {
-    //     city: "Asheville",
-    //     state: "North Carolina",
-    //     state_code: "NC",
-    //     population: 88507,
-    //     median_age: 37.9,
-    //     avg_household_size: 2.18
-    // },
+    {
+        city: "Concord",
+        state: "North Carolina",
+        state_code: "NC",
+        population: 60500,
+        median_age: 35.7,
+        avg_household_size: 2.72
+    },
+    {
+        city: "Charlotte",
+        state: "North Carolina",
+        state_code: "NC",
+        population: 827121,
+        median_age: 34.3,
+        avg_household_size: 2.52
+    },
+    {
+        city: "Asheville",
+        state: "North Carolina",
+        state_code: "NC",
+        population: 88507,
+        median_age: 37.9,
+        avg_household_size: 2.18
+    },
     // {
     //     city: "Durham",
     //     state: "North Carolina",
@@ -141,35 +138,36 @@ function citySort(){
 
 function sortByPopulation(data, order){
 
-    let sortedPop = 0;
+    let sortedPop = [];
 
 
-    if(order == "smallest"){
+
+    if(order == "ascending"){
+
+        for(let i = data.length - 1; i >= 0; i--){
+            
+            let popCount= data[i].population;
+            sortedPop.unshift(popCount);
+            
+        }
         
+        sortedPop.sort((a,b) => {return a - b});
+        console.log(sortedPop);
        
-    }else if(order == "largest"){
+    }else if(order == "descending"){
         for(let i = 0; i < data.length; i++){
 
             let popCount = data[i].population;
-    
-            if( popCount > sortedPop){
-                sortedPop = popCount;
-            }
+            
+            sortedPop.push(popCount)
+           
         }
-        // console.log(sortedPop)
+        sortedPop.sort((a,b) => {return b - a})
+        console.log(sortedPop)
     }
 
 
 };
 
 
-// sortByPopulation(cityData, "smallest");
-
-let arr1 = ["dog","pig","zebra", "cat","spider"];
-
-let numArr = [1,3,10,200,50]
-
-numArr.sort((a,b) =>  a - b);
-
-
-console.log(numArr);
+sortByPopulation(cityData, "descending");

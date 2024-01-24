@@ -19,7 +19,7 @@ let cityData = [
         avg_household_size: 2.51,
     },
     {
-        city: "Cary",
+        city: "Barry",
         state: "North Carolina",
         population: 160514,
         median_age: 39.9,
@@ -57,78 +57,78 @@ let cityData = [
         median_age: 37.9,
         avg_household_size: 2.18
     },
-    // {
-    //     city: "Durham",
-    //     state: "North Carolina",
-    //     state_code: "NC",
-    //     population: 257598,
-    //     median_age: 33.2,
-    //     avg_household_size: 2.40
-    // },
-    // {
-    //     city: "Greenville",
-    //     state: "North Carolina",
-    //     state_code: "NC",
-    //     population: 90588,
-    //     median_age: 26.2,
-    //     avg_household_size: 2.40
-    // },
-    // {
-    //     city: "Raliegh",
-    //     state: "North Carolina",
-    //     state_code: "NC",
-    //     population: 451949,
-    //     median_age: 32.8,
-    //     avg_household_size: 2.42
-    // },
-    // {
-    //     city: "High Point",
-    //     state: "North Carolina",
-    //     state_code: "NC",
-    //     population: 109828,
-    //     median_age: 35.5,
-    //     avg_household_size: 2.65
-    // },
-    // {
-    //     city: "Gastonia",
-    //     state: "North Carolina",
-    //     state_code: "NC",
-    //     population: 74550,
-    //     median_age: 36.9,
-    //     avg_household_size: 2.67
-    // },
-    // {
-    //     city: "Fayetteville",
-    //     state: "North Carolina",
-    //     state_code: "NC",
-    //     population: 201965,
-    //     median_age: 30.7,
-    //     avg_household_size: 2.50
-    // },
-    // {
-    //     city: "Winston-Salem",
-    //     state: "North Carolina",
-    //     state_code: "NC",
-    //     population: 241232,
-    //     median_age: 34.7,
-    //     avg_household_size: 2.47
-    // },
-    // {
-    //     city: "Greensboro",
-    //     state: "North Carolina",
-    //     state_code: "NC",
-    //     population: 285344,
-    //     median_age: 35.5,
-    //     avg_household_size: 2.36
-    // },
-    // {
-    //     city: "Kernersville",
-    //     state: "North Carolina",
-    //     state_code: "NC",
-    //     population: 14,
-    //     median_age: 42,
-    //     avg_household_size: 2.31
-    // }
+    {
+        city: "Durham",
+        state: "North Carolina",
+        state_code: "NC",
+        population: 257598,
+        median_age: 33.2,
+        avg_household_size: 2.40
+    },
+    {
+        city: "Greenville",
+        state: "North Carolina",
+        state_code: "NC",
+        population: 90588,
+        median_age: 26.2,
+        avg_household_size: 2.40
+    },
+    {
+        city: "Raliegh",
+        state: "North Carolina",
+        state_code: "NC",
+        population: 451949,
+        median_age: 32.8,
+        avg_household_size: 2.42
+    },
+    {
+        city: "High Point",
+        state: "North Carolina",
+        state_code: "NC",
+        population: 109828,
+        median_age: 35.5,
+        avg_household_size: 2.65
+    },
+    {
+        city: "Gastonia",
+        state: "North Carolina",
+        state_code: "NC",
+        population: 74550,
+        median_age: 36.9,
+        avg_household_size: 2.67
+    },
+    {
+        city: "Fayetteville",
+        state: "North Carolina",
+        state_code: "NC",
+        population: 201965,
+        median_age: 30.7,
+        avg_household_size: 2.50
+    },
+    {
+        city: "Winston-Salem",
+        state: "North Carolina",
+        state_code: "NC",
+        population: 241232,
+        median_age: 34.7,
+        avg_household_size: 2.47
+    },
+    {
+        city: "Greensboro",
+        state: "North Carolina",
+        state_code: "NC",
+        population: 285344,
+        median_age: 35.5,
+        avg_household_size: 2.36
+    },
+    {
+        city: "Kernersville",
+        state: "North Carolina",
+        state_code: "NC",
+        population: 14,
+        median_age: 42,
+        avg_household_size: 2.31
+    }
 ];
 
 
@@ -136,11 +136,11 @@ function citySort(){
     //call all functions here
 }
 
+
+// [ COMPLICATED METHOD ] of sorting population size either ascending or descending
 function sortByPopulation(data, order){
 
     let sortedPop = [];
-
-
 
     if(order == "ascending"){
 
@@ -150,24 +150,51 @@ function sortByPopulation(data, order){
             sortedPop.unshift(popCount);
             
         }
-        
         sortedPop.sort((a,b) => {return a - b});
-        console.log(sortedPop);
-       
+
     }else if(order == "descending"){
         for(let i = 0; i < data.length; i++){
 
             let popCount = data[i].population;
-            
             sortedPop.push(popCount)
            
         }
         sortedPop.sort((a,b) => {return b - a})
-        console.log(sortedPop)
-    }
+    };
 
 
+    return sortedPop;
 };
 
 
-sortByPopulation(cityData, "descending");
+//sorting cities alphabetically 
+function sortByCityName(data){
+
+    let sortedCities = [];
+
+    for(let i = 0; i < data.length; i++){
+
+        let newCity =  data[i].city;
+        sortedCities.push(newCity);
+
+    }
+    sortedCities.sort();
+
+    return sortedCities;
+}
+
+
+
+//[ SIMPLY ] sorting by median_age
+function sortByAge(data){
+
+
+    data.sort((a,b) => {
+        return a.median_age - b.median_age
+    })
+
+    //outputing only the median_age of each obj in the array.
+    console.log(data.map(x => x.median_age))
+}
+
+sortByAge(cityData);

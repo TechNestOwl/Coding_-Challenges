@@ -134,6 +134,21 @@ let cityData = [
 
 function citySort(){
     //call all functions here
+
+    sortByAge(cityData);
+
+
+    tbody = document.getElementById("results");
+
+    let tableRow = "";
+
+    //displaying the data
+    cityData.forEach( item => {
+        tableRow +=  `<tr><td>${item.city}</td><td>${item.state_code}</td><td>${item.population.toLocaleString("en-US")}</td><td>${item.median_age}</td><td>${item.avg_household_size}</td></tr>`;
+    });
+    tbody.innerHTML ="";
+    tbody.innerHTML = tableRow;
+
 }
 
 
@@ -194,7 +209,6 @@ function sortByAge(data){
     })
 
     //outputing only the median_age of each obj in the array.
-    console.log(data.map(x => x.median_age))
+    // console.log(data.map(x => x.median_age))
 }
 
-sortByAge(cityData);

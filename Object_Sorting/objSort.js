@@ -4,8 +4,13 @@
 //I am going to sort through the aray and output in descending order
 //  the population of each item/"city".
 
+//array.sort() out of the box will sort items in an array alphabetically.  Because of this propblem,
+/*
+because of this problem, always create a compare function. 
+*/
 
 
+//additionally, sort by City Name and median age. 
 
 let cityData = [
     {
@@ -23,14 +28,14 @@ let cityData = [
         median_age: 39.9,
         avg_household_size: 2.61,
     },
-    // {
-    //     city: "Wilmington",
-    //     state: "North Carolina",
-    //     state_code: "NC",
-    //     population: 89270,
-    //     median_age: 35.5,
-    //     avg_household_size: 2.24
-    // },
+    {
+        city: "Wilmington",
+        state: "North Carolina",
+        state_code: "NC",
+        population: 89270,
+        median_age: 35.5,
+        avg_household_size: 2.24
+    },
     // {
     //     city: "Concord",
     //     state: "North Carolina",
@@ -123,24 +128,48 @@ let cityData = [
     //     city: "Kernersville",
     //     state: "North Carolina",
     //     state_code: "NC",
-    //     population: 24414,
+    //     population: 14,
     //     median_age: 42,
     //     avg_household_size: 2.31
-
     // }
 ];
 
-function descPop(arr1){
 
-    let sortedPopulation = [];
+function citySort(){
+    //call all functions here
+}
 
-    for(let i = 0; i < arr1.length; i++){
-        sortedPopulation.push(arr1[i].population)
+function sortByPopulation(data, order){
+
+    let sortedPop = 0;
+
+
+    if(order == "smallest"){
+        
        
+    }else if(order == "largest"){
+        for(let i = 0; i < data.length; i++){
+
+            let popCount = data[i].population;
+    
+            if( popCount > sortedPop){
+                sortedPop = popCount;
+            }
+        }
+        // console.log(sortedPop)
     }
 
 
-    console.log(sortedPopulation)
-}
+};
 
-descPop(cityData);
+
+// sortByPopulation(cityData, "smallest");
+
+let arr1 = ["dog","pig","zebra", "cat","spider"];
+
+let numArr = [1,3,10,200,50]
+
+numArr.sort((a,b) =>  a - b);
+
+
+console.log(numArr);

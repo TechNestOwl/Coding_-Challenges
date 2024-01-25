@@ -48,6 +48,26 @@ function anagramCheck(){
 
     function isAnagram(a,b){
 
+        //usign regex to remove white space char and replace with empty string
+        // + means two contiguous spaces get reduced to one. 
+        word1 = word1.replace(/\s+/g,"");
+        word2 = word2.replace(/\s+/g,"");
+
+
+        //check to see if they're the same length
+        if(word1.length != word2.length){
+            return false;
+        }
+
+        //converting to lowercase
+        word1 = word1.toLowerCase();
+        word2 = word2.toLowerCase();
+
+        // spliting the string into an array, than sort, than join 
+        word1 = word1.split('').sort().join('');
+        word2 = word2.split('').sort().join('');
+
+        return(word1 == word2);
         
     }
 

@@ -33,11 +33,24 @@ function vowelFinder(string){
         comaparison(e)
     })
 
+    foundVowels = foundVowels.split('');
+    //filtering out duplicate vowels
+    let uniqueVowels = foundVowels.filter(function(value,index,array){
+        return array.indexOf(value) === index;
+    });
 
-    let output = `Found ${vowelCounter} vowels, which are ${foundVowels}`;
+
+    // let output = `Found ${vowelCounter} vowels, which are ${foundVowels}`;
+    
+    let output = {
+        count : vowelCounter,
+        vowels: uniqueVowels,
+    };
 
     console.log(output);
     return output;
 }
 
 vowelFinder(string1)
+
+

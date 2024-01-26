@@ -19,6 +19,7 @@ function vowelFinder(string){
     let input = string.toLowerCase().split("");
 
    
+    //I could've used the includes() method. But this was more fun. 
     function comaparison(vowel){
 
         input.forEach((e)=>{
@@ -54,5 +55,24 @@ function vowelFinder(string){
     return output;
 }
 
-vowelFinder(string1)
+
+function vowelFinder2(str){
+    
+    let vowels = ["a","e","i","o","u"];
+    let foundVowels = [];
+    let vowelCounter = 0;
+    let input = str.toLowerCase();
+
+    for(let i = 0; i < str.length; i++){
+        if(vowels.includes(str[i])){
+            vowelCounter ++;
+            foundVowels += str[i];
+        }
+    }
+
+console.log(vowelCounter, foundVowels)
+    
+}
+
+
 

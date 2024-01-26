@@ -100,9 +100,9 @@ function anagramCompare(a, b){
    
 
     if(word1 != word2){
-        console.log("this is not an anagram")
+        console.log(`${a} and ${b} are not anagrams`)
     }else{
-        console.log("this is an anagram")
+        console.log(`${a} and ${b} are anagrams`)
     };
 }
 
@@ -113,10 +113,9 @@ function inputFormat(word){
     formattedWord = formattedWord.toLowerCase();
 
     formattedWord = formattedWord.split('').sort().join('')
-    console.log(formattedWord)
 
     return formattedWord
 }
 
 
-anagramCompare("doog","god");
+anagramCompare("dog","god");

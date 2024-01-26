@@ -46,11 +46,13 @@ function vowelFinder(string){
         count : vowelCounter,
         vowels: uniqueVowels,
     };
+    if( Object.keys(output).length == 0){
+        alert("Error: output object is empty")
+    };
 
     console.log(output);
     return output;
 }
 
 vowelFinder(string1)
-
 

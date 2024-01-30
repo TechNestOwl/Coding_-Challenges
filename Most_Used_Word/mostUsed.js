@@ -34,17 +34,53 @@ function getStopWords() {
 
 
 function mostUsedWords(text){
+
     let mostUsed = [];
+    let cleanedText = text.toLowerCase().replace(/[^a-z0-9-]/g, ' ').split(' ');
 
-    let cleanedText = text.toLowerCase().replace(/[^a-z0-9-]/g, ' ');
+
+    //creating object for each word instance in text
+    for(let i = 0; i < cleanedText.length; i++){
+
+        let wordObj = {
+            foundWord: cleanedText[i],
+            wordCounter: 0
+        }
+        wordObj.wordCounter ++;
+        mostUsed.push(wordObj);
+    };
+
     
+    let newArray = [];
+    let uniqueObject = {};
 
-    
+    //looping for the array elements
+    for (let i in mostUsed){
+        
+        //extract object word
+        objWord = mostUsed[i]["foundWord"];
+
+        //use the word as the index
+        uniqueObject[objWord] = mostUsed[i];
+        
+    };
+
+    // loop to push unique objects into array
+    for ( i in uniqueObject){
+        newArray.push(uniqueObject[i]);
+    }
+
+   console.log(newArray)
+    console.log(cleanedText)
 
 
-    // return mostUsed;
+
 }
 
-
-
 mostUsedWords(testWords)
+
+
+// function removeDuplicates(data){
+//     return data.filter((value, index) => data.indexOf(value) === index)
+
+// };

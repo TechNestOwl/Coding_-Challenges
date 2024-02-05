@@ -24,7 +24,10 @@ function getVowlCount(str){
 
 
 
-    
+    if(Object.keys(vowelObj).length === 0){
+        alert("Error: vowel object is empty");
+        return
+    }
 
 
     // console.log(`There are ${vowelCount} vowels in the given input. Those vowels are ${foundVowels}`)

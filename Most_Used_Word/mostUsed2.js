@@ -67,4 +67,3 @@ function sortByCount(words, sortDirection){
 
 };
 
-

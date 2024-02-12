@@ -20,6 +20,10 @@ function isBalanced(caseTest){
 
         }else if(item == ')' || item == ']' || item == '}'){
 
+            if(stack.length == 0){
+                return false;
+            }
+
             check = stack.pop();
             switch(item){
                 case ')':

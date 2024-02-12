@@ -150,8 +150,6 @@ function citySort(){
     tbody.innerHTML = tableRow;
 
 }
-
-
 // [ COMPLICATED METHOD ] of sorting population size either ascending or descending
 // I will demonstrate with the .sort() method further down when sorting by median age.
 function sortByPopulation(data, order){
@@ -177,8 +175,6 @@ function sortByPopulation(data, order){
         }
         sortedPop.sort((a,b) => {return b - a})
     };
-
-
     return sortedPop;
 };
 

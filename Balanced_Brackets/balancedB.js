@@ -4,44 +4,44 @@
 
 
 const testBrackets = "[{(())}]"; // true
-const testbrackets2 = "[()]{}{[()()]()}"; // true
+const testBrackets2 = "[()]{}{[()()]()}"; // true
 const testBrackets3 = "[{((}))}]"; // false
 
 
 
 function isBalanced(str){
+    
+    let stack = [];
+    let openBrackets = ["(","{","["];
+    let closeBrackets = [")","}","]"];
 
-    let result = {
-        input: str,
-        balanced: false
+    let balancedBrackets = {
+        "(" : ")",
+        "{" : "}",
+        "[" : "]"
     };
 
-    let uniqueChar = new Set(str);
-    let uniqueArr = [...uniqueChar];
-    console.log(uniqueArr)
+    for(let i = 0; i < str.length; i++){
+        let item = str[i];  
+        if(openBrackets.includes(item)){
+            stack.push(item);
+            continue
+        }else if(closeBrackets.includes(item)){
+            if(stack.length == 0){
+                return false;
+            }
+            check = stack.pop();
+            if(balancedBrackets[check] != item){
+                return false;
+            }
+        }
+    }
 
-
-    let cleanStr = [...str];
-    console.log(cleanStr);
-
-
-
-
-
-
-
-
-    // comparison operation needs to be re-thought
-    // if( uniqueArr.length == cleanStr.length ){
-    //     result.balanced = true;    
-    // }
-    
-
-    console.log(result)
-    return result;
+  
+    return stack.length == 0;
 }
 
 
-isBalanced(testbrackets2);
+isBalanced(testBrackets2);
 
 

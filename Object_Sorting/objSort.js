@@ -155,7 +155,6 @@ function citySort(){
 function sortByPopulation(data, order){
 
     let sortedPop = [];
-
     if(order == "ascending"){
 
         for(let i = data.length - 1; i >= 0; i--){

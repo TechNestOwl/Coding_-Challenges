@@ -35,8 +35,8 @@ function convertToMi(km){
 
 let newStatement = "2024 IS MY YEAR";
 
-function speakOutlout(a){
-    console.log(a + "repeat me x3");
+function speakOutlout(personalStatement){
+    console.log(personalStatement + "repeat me x3");
 };
 
 speakOutloud(newStatement);
@@ -64,8 +64,6 @@ function convertToF(c){
 
     return fahrenheit;
 }
-
-
 
 
 

@@ -22,6 +22,14 @@ body {
   .navbar-custom .nav-item.active .nav-link {
     font-weight: bold; /* Bold font for active menu item */
   }
+
+  .dropdown-menu {
+    border-radius: 10px; /* Rounded corners for dropdown menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for dropdown menu */
+  }
+  #navID{
+    background-color: #3f556a;
+  }
   
 
   /* greeting button styling */
@@ -106,20 +114,23 @@ body {
 
 /* modal */
 .modal-content {
-  border-radius: 15px; /* Rounded corners for the modal */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for the modal */
+  border-radius: 20px; /* Rounded corners for the modal */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow for the modal */
+}
+.modal-header {
+  border-bottom: 1px solid #adb1b6; 
+}
+.modal-body {
+  padding: 2rem; 
 }
 .modal-body img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px; /* Rounded corners for the image */
+  border-radius: 15px; 
 }
-
-
-
-
-
-
+.btn-close {
+  filter: invert(1); /* Optional: Light-colored close button */
+}
 
 
 

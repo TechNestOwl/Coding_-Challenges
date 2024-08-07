@@ -25,7 +25,7 @@ body {
   
   /* Landing Hero */
 
-  
+
   .jumbotron {
     position: relative;
     background-image: url('Assets/heroImage.jpg');
@@ -52,6 +52,27 @@ body {
   .testimonial {
     background-color: #e9ecef;
     padding: 80px 0;
+  }
+
+
+  /* Landing main content */
+
+  .section {
+    padding: 80px 0;
+    background-color: #f8f9fa; /* Light background color */
+  }
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Adjust the gap between image and text */
+  }
+  .feature-img {
+    max-width: 100%; /* Ensure images are responsive */
+    border-radius: 10px; 
+    box-shadow: 0 0 25px rgba(0,0,0,0.1); /* Shadow for images */
+  }
+  .feature-text {
+    padding: 0 20px; /* Adjust padding around text */
   }
 
 

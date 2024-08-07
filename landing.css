@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dde5ed;
+  }
+
+  /* Navigation */
+
+  .navbar-custom {
+    background-color: #343a40; /* Dark background color */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Shadow for navbar */
+  }
+  .navbar-custom .navbar-brand {
+    color: #ffffff; /* White text color */
+  }
+  .navbar-custom .navbar-nav .nav-link {
+    color: #ffffff; /* White text color */
+    transition: 0.3s; /* Smooth transition for hover effects */
+  }
+  .navbar-custom .navbar-nav .nav-link:hover {
+    color: #ffffff; /* White text color on hover */
+  }
+  .navbar-custom .nav-item.active .nav-link {
+    font-weight: bold; /* Bold font for active menu item */
+  }
+  
+  /* Landing Hero */
+
+  
+  .jumbotron {
+    position: relative;
+    background-image: url('Assets/heroImage.jpg');
+    height: 900px;
+    background-size: cover;
+    background: contain;
+    color: #ffffff;
+    text-align: left;
+    padding: 150px 25px;
+    margin-bottom: 0;
+  }
+  .jumbotron-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+  }
+  .features {
+    padding: 80px 0;
+  }
+  .feature-box {
+    text-align: center;
+  }
+  .testimonial {
+    background-color: #e9ecef;
+    padding: 80px 0;
+  }
+
+
+  /* Footer */
+
+  .footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 30px 0;
+    text-align: center;
+  }

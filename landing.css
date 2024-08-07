@@ -1,12 +1,12 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #dde5ed;
+    background-color: #f6f4e4;
   }
 
   /* Navigation */
 
   .navbar-custom {
-    background-color: #343a40; /* Dark background color */
+    background-color: #3f556a; /* Dark background color */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Shadow for navbar */
   }
   .navbar-custom .navbar-brand {
@@ -21,6 +21,32 @@ body {
   }
   .navbar-custom .nav-item.active .nav-link {
     font-weight: bold; /* Bold font for active menu item */
+  }
+  
+
+  /* greeting button styling */
+
+  .stylish-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px; 
+    background: linear-gradient(45deg, #6fcacc, #366b3a); 
+    box-shadow: 0 4px 8px rgba(100, 98, 98, 0.572); /* Shadow effect */
+    transition: background 0.3s, transform 0.3s; /* Smooth transitions */
+  }
+
+  .stylish-button:hover,
+  .stylish-button:focus {
+    background: linear-gradient(45deg, #6fcacc, #366b3a);  
+    box-shadow: 0 4px 8px rgba(186, 185, 185, 0.572); /* Shadow effect */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    outline: none; /* Remove default outline */
   }
   
   /* Landing Hero */
@@ -58,29 +84,43 @@ body {
   /* Landing main content */
 
   .section {
-    padding: 80px 0;
+    padding: 60px 0;
     background-color: #f8f9fa; /* Light background color */
   }
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 50px; /* Adjust the gap between image and text */
+  .column-separator {
+    border-left: 10px solid #0e4780; /* Stylish vertical line */
+    height: 100%; /* Full height */
+    margin: 0 20px; /* Space between columns */
   }
-  .feature-img {
-    max-width: 100%; /* Ensure images are responsive */
-    border-radius: 10px; 
-    box-shadow: 0 0 25px rgba(0,0,0,0.1); /* Shadow for images */
+  .column-content {
+    padding: 20px;
   }
-  .feature-text {
-    padding: 0 20px; /* Adjust padding around text */
+  @media (max-width: 768px) {
+    .column-separator {
+      display: none; /* Hide separator on smaller screens */
+    }
   }
 
 
   /* Footer */
 
-  .footer {
-    background-color: #343a40;
-    color: #ffffff;
-    padding: 30px 0;
-    text-align: center;
-  }
+ 
+footer{
+  background-color: #3f556a;
+  margin-bottom: 0;
+}
+.footer-heading {
+  font-size: 1.1rem; /* Adjust font size as needed */
+  font-weight: bold;
+  color: #979da2; /* Dark text color */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+#socialIconList {
+  margin: 100px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}

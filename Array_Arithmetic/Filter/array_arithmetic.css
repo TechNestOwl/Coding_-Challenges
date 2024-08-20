@@ -74,7 +74,7 @@
 }
 
 .btn-search:hover {
-    background-color: #007bff;
+    background-color: #014ea0;
     color: #fff;
     box-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff;
     transform: scale(1.1);
@@ -85,4 +85,39 @@
     src: url('https://www.fontsaddict.com/fontface/star-jedi') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+ /* Hidden Button */
+ .hidden-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(217, 195, 31, 0.983);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hidden-btn:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.933);
+    box-shadow: 0 0 10px #302406, 0 0 20px #6f6c0d, 0 0 30px #3f3e05;
+
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: #262525;
+    color: white;
+    border-radius: 10px;
+}
+
+.modal-header {
+    border-bottom: 1px solid #444;
+}
+
+.modal-body {
+    color: #ddd;
 }

@@ -6,7 +6,7 @@ body {
   /* Navigation */
 
   .navbar-custom {
-    background-color: #3f556a; /* Dark background color */
+    background-color: #d21414; /* Dark background color */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Shadow for navbar */
   }
   .navbar-custom .navbar-brand {

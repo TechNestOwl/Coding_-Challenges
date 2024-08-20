@@ -41,66 +41,40 @@ function findLongestW(arrayToBeSorted){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// //driver function, used to display and pass values
-// function findLanguage(){
+//driver function, used to display and pass values
+function findLanguage(){
     
-//     let lWord = findLongestName(codingLanguages);
+    let lWord = findLongestName(codingLanguages);
 
-//     // let sWord = findShortestName(codingLanguages,lWord)
+    // let sWord = findShortestName(codingLanguages,lWord)
 
-//     document.getElementById("results").innerHTML = lWord;
-// };
+    document.getElementById("results").innerHTML = lWord;
+};
 
-// function findLongestName(arrayTBsorted){
+function findLongestName(arrayTBsorted){
    
-//     let longestName = "";
+    let longestName = "";
 
-//     for(let index = 0; index < arrayTBsorted.length; index++){
+    for(let index = 0; index < arrayTBsorted.length; index++){
 
-//         if(arrayTBsorted[index].length > longestName.length){
-//             longestName = arrayTBsorted[index];
-//         }
-//     }
-//     return longestName;
-// };
+        if(arrayTBsorted[index].length > longestName.length){
+            longestName = arrayTBsorted[index];
+        }
+    }
+    return longestName;
+};
 
-// function findShortestName(arrayTBsorted, lWord){
+function findShortestName(arrayTBsorted, lWord){
    
-//     let shortestName = lWord;
+    let shortestName = lWord;
 
-//     for(let index = 0; index < arrayTBsorted.length; index++){
+    for(let index = 0; index < arrayTBsorted.length; index++){
 
-//         if(arrayTBsorted[index].length < shortestName.length){
-//             shortestName = arrayTBsorted[index];
-//         }
-//     }
-//     return shortestName;
-// };
+        if(arrayTBsorted[index].length < shortestName.length){
+            shortestName = arrayTBsorted[index];
+        }
+    }
+    return shortestName;
+};
 
 

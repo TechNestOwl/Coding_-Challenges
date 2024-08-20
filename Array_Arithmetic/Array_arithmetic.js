@@ -66,3 +66,8 @@ function arrMin(arr){
     }
     return min;
 }
+
+
+
+
+

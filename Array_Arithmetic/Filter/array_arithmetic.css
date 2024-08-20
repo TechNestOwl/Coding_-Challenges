@@ -1,0 +1,88 @@
+ /* Outer space background with twinkling stars */
+ body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    overflow: hidden;
+    font-family: 'Star Jedi', sans-serif;
+
+}
+
+.starfield {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+
+.search-container {
+    text-align: center;
+    z-index: 1;
+}
+
+.search-container h1 {
+    font-family: 'Star Jedi', sans-serif;
+    color: #f7ef10;
+    margin-bottom: 40px;
+    font-size: 3rem;
+}
+
+.form-control {
+    border: none;
+    border-radius: 50px;
+    padding: 15px;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-search {
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border: 2px solid #007bff;
+    color: #007bff;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-search:hover {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff;
+    transform: scale(1.1);
+}
+
+@font-face {
+    font-family: 'Star Jedi';
+    src: url('https://www.fontsaddict.com/fontface/star-jedi') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

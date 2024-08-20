@@ -1,6 +1,7 @@
 // logic for calculation of the bill total
 
-let billAmount;
+
+
 let serviceExp = ["Poor","Fair","Excellent"];
 let tipPrecentage = null;
 let tipAmount =  null;
@@ -25,7 +26,10 @@ function CalculateTip(billAmount, userInput){
     console.log(receipt)
 }
 
-CalculateTip(100, "Poor");
 
-// const calculateBill = (billAmount, tipAmount) => {
-// }
+// Here displayTotal is a higher order function
+
+const displayTotal = () => {
+    
+    CalculateTip(100, "Poor");
+}

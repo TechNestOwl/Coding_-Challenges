@@ -86,11 +86,21 @@ characters.map((i)=>{
     nameArr.push(i.name)
 });
 
+//simplier method
+let planets = characters.map(i => i.homeworld);
+
+
 //2:
 let charType = [];
 characters.map((i)=>{
     charType.push([i.species,i.homeworld]);
 });
+
+let planetObj = characters.map( (i) => ({
+    species: i.species,
+    homeworld: i.homeworld
+    })
+);
 
 //3:
 let charObj = [];
@@ -101,10 +111,12 @@ characters.map((i)=>{
     });
 });
 
+
 //4:
+const firstName = characters.map( char => char.name.split(' ')[0]);
 
 
-
+// console.log(firstNames)
 
 
 //***REDUCE***
@@ -114,11 +126,21 @@ characters.map((i)=>{
 //4. Get total number of characters in all the character names
 
 //***FILTER***
-//1. Get characters with mass greater than 100
-//2. Get characters with height less than 200
-//3. Get all male characters
-//4. Get all female characters
+//1. Get characters with role Revel Alliance
+//3. Get all droid characters based on their role ( not species )
 
+//1:
+let heros = characters.filter( character => {
+
+    if(character.affiliation == "Rebel Alliance"){
+        return character; // if condition is true, current character will pass the filter and be added to heros array
+    };
+});
+//refactored code above:
+let scum = characters.filter(character => character.affiliation == "Galactic Empire");
+
+//3:
+let droids = characters.filter(char => char.role.includes("Droid"));
 
 
 

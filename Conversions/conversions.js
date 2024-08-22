@@ -12,16 +12,13 @@ document.getElementById("btnSubmit3").addEventListener("click", convertCm);
 
 
 function convertMi(){
-    //getting the users input. Note: parseFloat converts a string into a floating point number
     let kmValue = parseFloat(document.getElementById("InputValue1").value)
 
-    //checking to see if input is valid/
     if(isNaN(kmValue)){
         alert("please input a number value")
     }else{
         let milesValue = convertToMi(kmValue)
 
-        //displaying finished conversion + rounding 2 decimal places
         document.getElementById("results").innerHTML = `${kmValue} kilometers is equivalent to ${milesValue.toFixed(2)} miles`
     }
 }
@@ -32,14 +29,6 @@ function convertToMi(km){
     return milesValue;
 }
 
-
-let newStatement = "2024 IS MY YEAR";
-
-function speakOutlout(personalStatement){
-    console.log(personalStatement + "repeat me x3");
-};
-
-speakOutloud(newStatement);
 
 
 function convertF(){

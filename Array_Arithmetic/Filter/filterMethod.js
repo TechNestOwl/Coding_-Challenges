@@ -1,5 +1,14 @@
 // Array filter()
 
+const toggleView = ()=>{
+    document.getElementById("info-card").classList.toggle("displayCard");
+    document.getElementById("inputContainer").classList.toggle("hideItAll");
+}
+
+document.getElementById("open-card").addEventListener("click", toggleView);
+document.getElementById("close-card").addEventListener("click", toggleView);
+
+
 const characters = [
     {
         name: "Luke Skywalker",

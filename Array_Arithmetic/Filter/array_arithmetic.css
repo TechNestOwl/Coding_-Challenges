@@ -121,3 +121,58 @@
 .modal-body {
     color: #ddd;
 }
+
+
+/* Info card */
+
+.info-card {
+    background-color: #262525;;
+    color:white;
+    box-shadow: 0 4px 8px rgba(217, 195, 31, 0.983);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 300px;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.displayCard {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.description {
+    padding: 20px;
+}
+
+h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.divider {
+    width: 50px;
+    height: 4px;
+    background-color: #1b1b1b;
+    margin: 10px auto;
+}
+
+p {
+    margin: 10px 0;
+    color: white;
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+.hideItAll{
+    display:none;
+}
